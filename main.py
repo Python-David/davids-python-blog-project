@@ -23,7 +23,10 @@ login_manager = LoginManager()
 login_manager.init_app(app)
 
 ##CONNECT TO DB
-app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///blog.db'
+#app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///blog.db'
+app.config['SQLALCHEMY_DATABASE_URI'] = "postgres://bgvdrjuqeizahj" \
+                                        ":3d4519dd142ac5ff749ce8f819ff2396e9c6509035093401841311513ef1e58f@ec2-34-201" \
+                                        "-95-176.compute-1.amazonaws.com:5432/dfcd9b9jqda5ms "
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 db = SQLAlchemy(app)
 
